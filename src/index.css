@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --color-ink: #0a0e17;
+  --color-ink-soft: #10151f;
+  --color-panel: #131926;
+  --color-line: #232936;
+  --color-champagne: #c9a76a;
+  --color-champagne-soft: #e4cfa0;
+  --color-mist: #9aa4bd;
+  --color-paper: #eef1f7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-champagne);
+  color: var(--color-ink);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient-champagne {
+  background: linear-gradient(120deg, var(--color-champagne-soft), var(--color-champagne));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-panel {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.glow-champagne {
+  box-shadow: 0 0 0 1px rgba(201, 167, 106, 0.15), 0 20px 60px -20px rgba(201, 167, 106, 0.25);
+}
+
+.section-eyebrow {
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--color-champagne);
+}
+
+/* thin scrollbar for a more refined feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 6px;
+}
